@@ -1,8 +1,15 @@
+//este fichero maneja el imput del usuario al chatbot
+
 import React from "react";
 
 const MessageParser = ({ children, actions }) => {
+  
   const parse = (message) => {
-    console.log(message);
+
+    if (message.includes('hello')) {//aqui se define el imput que llama a la funcion que hace que el chatbot responda
+      actions.handleHello();
+    }
+    
   };
 
   return (
