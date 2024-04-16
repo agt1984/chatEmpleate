@@ -5,11 +5,14 @@ import React from "react";
 const MessageParser = ({ children, actions }) => {
   
   const parse = (message) => {
-
+    
     if (message.includes('hello')) {//aqui se define el imput que llama a la funcion que hace que el chatbot responda
       actions.handleHello();
     }
     
+    if (message.includes('posterior')) {//aqui se define el imput que llama a la funcion que hace que el chatbot responda
+      actions.mensajeDespues();
+    }
   };
 
   return (
