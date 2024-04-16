@@ -1,22 +1,15 @@
 import React from "react";
 
-
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   
+  //forma en la que construyes la funcion respuesta
   const handleHello = () => {
     const botMessage = createChatBotMessage('Hello. Nice to meet you.');
-
     setState((prev) => ({
       ...prev,
       messages: [...prev.messages, botMessage]
     }));
   };
-  
-  
-  
-  
-  
-  
   
   return (
     <div>
@@ -29,6 +22,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       })}
     </div>
   );
+
 };
 
 export default ActionProvider;
