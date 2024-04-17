@@ -13,6 +13,11 @@ const MessageParser = ({ children, actions }) => {
     if (message.includes('posterior')) {//aqui se define el imput que llama a la funcion que hace que el chatbot responda
       actions.mensajeDespues();
     }
+
+    if (message.includes("dog")) {//widget
+      actions.handleDog();
+    }
+    
   };
 
   return (
