@@ -36,6 +36,7 @@
 
 .react-chatbot-kit-chat-btn-send {
   background-color: #f10947;
+  transition: 0.7s;
 }
 
 .ADE {
@@ -49,13 +50,17 @@
 }
 
 .start-btn {
-  background-color: #f10947;
+  background-color: #fb3f72;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 999px;
   border: none;
   cursor: pointer;
   margin-left: 3rem;
+  margin-top: 3px;
+}
+.start-btn:hover {
+  background-color: #ff0245;
 }
 
 .slow-btn {
