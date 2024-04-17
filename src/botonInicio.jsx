@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function botonInicio() {
+export default function BotonInicio() {
   return (
-    <div>botonInicio</div>
+    <div>
+        <button className='start-btn'>Iniciemos</button>
+    </div>
   )
 }
