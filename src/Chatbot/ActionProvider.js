@@ -2,7 +2,9 @@ import React from 'react';
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
+  //--
   //rama años de EXPERIENCIA
+  //--
     const añosExpe = () => {
       const message = createChatBotMessage(
         "¿Cuántos años de experiencia profesional tienes?",
@@ -15,7 +17,27 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
     const añosExpeMenos2 = () => {
       const message = createChatBotMessage(
-        "Aqui te prporciono los siguientes enlaces: \nDirectorio de Portales de \nEmpleo para Buscar Prácticas y Primeras Experiencias Profesionales: \nhttps://www.empleatecontalento.es/", "Aqui te prporciono los siguientes enlaces: \nDirectorio de Portales de \nEmpleo para Buscar Prácticas y Primeras Experiencias Profesionales: \nhttps://www.empleatecontalento.es/",
+        "A continuación, te facilito los contenidos que mejor se ajustan a tus necesidades. Puedes seleccionar uno de los botones que te enviará directamente al portal que necesites.",
+        {
+          widget: "BotonAñosExpeMenosEnlaces",
+        }
+      );
+      updateState(message);
+    };
+
+    const Despedida = () => {
+      const message = createChatBotMessage(
+        "Espero haberte ayudado ;) . Por último, te animo a seguirnos en nuestras RRSS para estar al día en nuestros contenidos",
+        {
+          widget: "Despedida",
+        }
+      );
+      updateState(message);
+    }
+
+    const añosExpeMas2 = () => {
+      const message = createChatBotMessage(
+        "A continuación, te facilito los contenidos que mejor se ajustan a tus necesidades. Puedes seleccionar uno de los botones que te enviará directamente al portal que necesites.",
         {
           widget: "BotonAñosExpe",
         }
@@ -25,7 +47,12 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
 
 
+
+
+
+    //--
     //segunda rama FORMACION
+    //--
     const ramaFormacion = () => {
       const message = createChatBotMessage(
         "¿Cuál es tu situación actual? Puedes marcar más de una opción"
@@ -35,8 +62,9 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
 
 
-
+    //--
     //tercera rama EMPRENDIMIENTO
+    //--
     const ramaEmprendimiento = () => {
       const message = createChatBotMessage(
         "¿En cuáles de estos aspectos necesitas ayuda como emprendedor/a? Puedes marcar más de una opción"
@@ -64,8 +92,12 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
                   actions: {
                     añosExpe,
                     añosExpeMenos2,
+                    añosExpeMas2,
+
                     ramaFormacion,
                     ramaEmprendimiento,
+
+                    Despedida,
                   },
                 });
             })}

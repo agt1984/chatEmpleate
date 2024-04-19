@@ -51,7 +51,7 @@
 }
 
 .start-btn {
-  background-color: #fb3f72;
+  background-color: #e817b7;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 999px;
@@ -62,6 +62,22 @@
 }
 .start-btn:hover {
   background-color: #ff0245;
+  transition: 0.5s;
+}
+
+.end-btn {
+  background-color: #e817b7;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  margin-left: 1.8rem;
+  margin-top: 3px;
+}
+.end-btn:hover {
+  background-color: #ff0245;
+  transition: 0.5s;
 }
 
 
@@ -102,3 +118,4 @@
 .img-component a:hover {
   background-color: #61045f5e;
 }
+

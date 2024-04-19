@@ -2,6 +2,8 @@ import { createChatBotMessage } from 'react-chatbot-kit';
 import Avatar from './components/Avatar';
 import BotonInicio from './components/BotonInicio';
 import BotonAñosExpe from './components/BotonAñosExpe';
+import BotonAñosExpeMenosEnlaces from './components/BotonAñosExpeMenosEnlaces';
+import Despedida from './components/Despedida';
 
 const startbotn = document.querySelectorAll(".start-btn");
 
@@ -35,6 +37,14 @@ const config = {
     {
       widgetName: "BotonAñosExpe",
       widgetFunc: (props) => <BotonAñosExpe {...props} />,
+    },
+    {
+      widgetName: "BotonAñosExpeMenosEnlaces",
+      widgetFunc: (props) => <BotonAñosExpeMenosEnlaces {...props} />,
+    },
+    {
+      widgetName: "Despedida",
+      widgetFunc: (props) => <Despedida {...props} />,
     },
   ],
 };
