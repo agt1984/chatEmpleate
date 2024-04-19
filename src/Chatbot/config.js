@@ -3,6 +3,13 @@ import Avatar from './components/Avatar';
 import BotonInicio from './components/BotonInicio';
 import BotonAñosExpe from './components/BotonAñosExpe';
 
+const startbotn = document.querySelectorAll(".start-btn");
+
+startbotn.forEach((boton) => {
+  boton.addEventListener("click", function () {
+    this.classList.add("active"); // Añadir clase "active" al elemento cliqueado
+  });
+});
 
 const config = {
   botName: "Consejero Virtual",

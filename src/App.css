@@ -24,6 +24,7 @@
 
 .react-chatbot-kit-chat-bot-message {
   margin-left: 10px;
+  width: 100%;
 }
 
 .react-chatbot-kit-chat-bot-message {
@@ -62,6 +63,7 @@
 .start-btn:hover {
   background-color: #ff0245;
 }
+
 
 .slow-btn {
   margin-left: 1rem;
