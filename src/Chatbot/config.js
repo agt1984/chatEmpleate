@@ -3,7 +3,8 @@ import Avatar from './components/Avatar';
 import BotonInicio from './components/BotonInicio';
 import BotonAñosExpe from './components/BotonAñosExpe';
 import BotonAñosExpeMenosEnlaces from './components/BotonAñosExpeMenosEnlaces';
-import Despedida from './components/Despedida';
+import Redes from "./components/Redes";
+import SiNoCorreo from './components/SiNoCorreo';
 
 const startbotn = document.querySelectorAll(".start-btn");
 
@@ -43,8 +44,12 @@ const config = {
       widgetFunc: (props) => <BotonAñosExpeMenosEnlaces {...props} />,
     },
     {
-      widgetName: "Despedida",
-      widgetFunc: (props) => <Despedida {...props} />,
+      widgetName: "Redes",
+      widgetFunc: (props) => <Redes {...props} />,
+    },
+    {
+      widgetName: "SiNoCorreo",
+      widgetFunc: (props) => <SiNoCorreo {...props} />,
     },
   ],
 };

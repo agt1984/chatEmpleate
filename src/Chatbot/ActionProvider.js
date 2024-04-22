@@ -25,16 +25,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       updateState(message);
     };
 
-    const Despedida = () => {
-      const message = createChatBotMessage(
-        "Espero haberte ayudado ;) . Por último, te animo a seguirnos en nuestras RRSS para estar al día en nuestros contenidos",
-        {
-          widget: "Despedida",
-        }
-      );
-      updateState(message);
-    }
-
     const añosExpeMas2 = () => {
       const message = createChatBotMessage(
         "A continuación, te facilito los contenidos que mejor se ajustan a tus necesidades. Puedes seleccionar uno de los botones que te enviará directamente al portal que necesites.",
@@ -44,6 +34,29 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       );
       updateState(message);
     };
+
+    const Redes = () => {
+      const message = createChatBotMessage(
+        "Espero haberte ayudado ;) . Por último, te animo a seguirnos en nuestras RRSS para estar al día en nuestros contenidos",
+        {
+          widget: "Redes",
+        }
+      );
+      updateState(message);
+    }
+
+
+    const SiNoCorreo = () => {
+      const message = createChatBotMessage(
+        "¿Quieres que te enviemos estos contenidos a tu email?",
+        {
+          widget: "SiNoCorreo",
+        }
+      );
+      updateState(message);
+    };
+
+
 
 
 
@@ -60,8 +73,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       updateState(message);
     };
 
-
-
     //--
     //tercera rama EMPRENDIMIENTO
     //--
@@ -71,6 +82,9 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       );
       updateState(message);
     };
+
+
+
 
 
 
@@ -97,7 +111,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
                     ramaFormacion,
                     ramaEmprendimiento,
 
-                    Despedida,
+                    Redes,
+                    SiNoCorreo,
                   },
                 });
             })}

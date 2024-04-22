@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-export default function BotonInicio(props) {
-  
+export default function SiNoCorreo(props) {
   const [botonClickeado, setBotonClickeado] = useState(false);
 
   const handleClick = (action) => {
@@ -13,16 +12,12 @@ export default function BotonInicio(props) {
     }
   };
 
-  const añosExpe = () => {
-    props.actions.añosExpe();
+  const correoSi = () => {
+    props.actions.correoSi();
   };
 
-  const ramaFormacion = () => {
-    props.actions.ramaFormacion();
-  };
-
-  const ramaEmprendimiento = () => {
-    props.actions.ramaEmprendimiento();
+  const correoNo = () => {
+    props.actions.correoNo();
   };
 
   const getButtonClassName = () => {
@@ -33,24 +28,17 @@ export default function BotonInicio(props) {
     <div>
       <button
         className={getButtonClassName()}
-        onClick={() => handleClick(añosExpe)}
+        onClick={() => handleClick(correoSi)}
         disabled={botonClickeado}
       >
-        ¿Estás buscando empleo?
+        SI
       </button>
       <button
         className={getButtonClassName()}
-        onClick={() => handleClick(ramaFormacion)}
+        onClick={() => handleClick(correoNo)}
         disabled={botonClickeado}
       >
-        ¿Estás buscando formación?
-      </button>
-      <button
-        className={getButtonClassName()}
-        onClick={() => handleClick(ramaEmprendimiento)}
-        disabled={botonClickeado}
-      >
-        ¿Quieres emprender?
+        NO
       </button>
     </div>
   );
