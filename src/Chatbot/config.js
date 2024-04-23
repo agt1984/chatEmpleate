@@ -3,6 +3,7 @@ import Avatar from './components/Avatar';
 import BotonInicio from './components/BotonInicio';
 import BotonAñosExpe from './components/BotonAñosExpe';
 import BotonAñosExpeMenosEnlaces from './components/BotonAñosExpeMenosEnlaces';
+import BotonAñosExpeMasEnlaces from "./components/BotonAñosExpeMas";
 import Redes from "./components/Redes";
 import SiNoCorreo from './components/SiNoCorreo';
 
@@ -43,6 +44,14 @@ const config = {
       widgetName: "BotonAñosExpeMenosEnlaces",
       widgetFunc: (props) => <BotonAñosExpeMenosEnlaces {...props} />,
     },
+    {
+      widgetName: "BotonAñosExpeMasEnlaces",
+      widgetFunc: (props) => <BotonAñosExpeMasEnlaces {...props} />,
+    },
+
+
+    
+    //widgets generales
     {
       widgetName: "Redes",
       widgetFunc: (props) => <Redes {...props} />,

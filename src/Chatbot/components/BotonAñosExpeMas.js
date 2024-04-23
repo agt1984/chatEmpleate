@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function BotonAñosExpe(props) {
+export default function BotonAñosExpeMas(props) {
   const [despedidaEjecutada, setDespedidaEjecutada] = useState(false);
 
   useEffect(() => {
@@ -36,58 +36,38 @@ export default function BotonAñosExpe(props) {
       <button
         onClick={() =>
           handleButtonClick(
-            "https://www.empleatecontalento.es/portales-empleo-jovenes-sin-experiencia-practicas-primer-empleo/"
+            "https://www.empleatecontalento.es/consultoras-seleccion-recursos-humanos-headhunters-cazatalentos-etts-buscar-trabajo-empleo/"
           )
         }
         className={getButtonClassName()}
       >
-        Portales de Empleo para Buscar Prácticas y Primeras Experiencias
-        Profesionales
+        Directorio de Consultoras de Selección y Head-hunters
       </button>
 
       <button
         onClick={() =>
           handleButtonClick(
-            "https://www.empleatecontalento.es/ferias-y-eventos-empleo/"
-          )
-        }
-        className={getButtonClassName()}
-      >
-        Directorio de Ferias de Empleo
-      </button>
-
-      <button
-        onClick={() =>
-          handleButtonClick(
-            "https://www.empleatecontalento.es/becas-trabajo-ofertas-practicas-curriculares-extracurriculares-academicas/"
-          )
-        }
-        className={getButtonClassName()}
-      >
-        Directorio de Becas de Trabajo
-      </button>
-
-      <button
-        onClick={() =>
-          handleButtonClick(
-            "https://www.empleatecontalento.es/mejores-webs-portales-empleo-para-buscar-trabajo/"
-          )
-        }
-        className={getButtonClassName()}
-      >
-        Directorio de Ofertas de Empleo y Prácticas en Multinacionales
-      </button>
-
-      <button
-        onClick={() =>
-          handleButtonClick(
-            "https://www.empleatecontalento.es/mejores-webs-portales-empleo-para-buscar-trabajo/"
+            "https://www.empleatecontalento.es/consultoras-seleccion-recursos-humanos-headhunters-cazatalentos-etts-buscar-trabajo-empleo/"
           )
         }
         className={getButtonClassName()}
       >
         Directorio de Portales de Empleo para Buscar Trabajo
       </button>
+
+      <button
+        onClick={() =>
+          handleButtonClick(
+            "https://www.empleatecontalento.es/mejores-webs-portales-empleo-para-buscar-trabajo/"
+          )
+        }
+        className={getButtonClassName()}
+      >
+        Directorio de Ofertas de Empleo en Multinacionales
+      </button>
     </div>
   );
 }
+
+
+

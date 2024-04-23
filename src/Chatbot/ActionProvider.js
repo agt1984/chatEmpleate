@@ -29,12 +29,15 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       const message = createChatBotMessage(
         "A continuación, te facilito los contenidos que mejor se ajustan a tus necesidades. Puedes seleccionar uno de los botones que te enviará directamente al portal que necesites.",
         {
-          widget: "BotonAñosExpe",
+          widget: "BotonAñosExpeMasEnlaces",
         }
       );
       updateState(message);
     };
 
+
+
+    //FUNCIONES QUE SERAN USADAS EN TODAS LAS RAMAS
     const Redes = () => {
       const message = createChatBotMessage(
         "Espero haberte ayudado ;) . Por último, te animo a seguirnos en nuestras RRSS para estar al día en nuestros contenidos",
@@ -44,7 +47,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       );
       updateState(message);
     }
-
 
     const SiNoCorreo = () => {
       const message = createChatBotMessage(
