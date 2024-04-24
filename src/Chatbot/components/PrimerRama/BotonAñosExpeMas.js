@@ -1,21 +1,21 @@
+
 import React, { useState, useEffect } from "react";
 
-export default function BotonAñosExpe(props) {
+export default function BotonAñosExpeMas(props) {
   const [despedidaEjecutada, setDespedidaEjecutada] = useState(false);
 
   useEffect(() => {
     if (!despedidaEjecutada) {
       // Establecer un temporizador para ejecutar las funciones después de 1000 milisegundos (1 segundo) al montar el componente
       const timeoutId = setTimeout(() => {
-        props.actions.Redes(); // Ejecutar Despedida solo una vez
-        props.actions.SiNoCorreo();
+        props.actions.DeseasMasAyuda(); // Ejecutar Despedida solo una vez
         setDespedidaEjecutada(true); // Marcar que Despedida se ha ejecutado
-      }, 1000);
+      }, 1600);
 
-      // Limpiar el temporizador al desmontar el componente para evitar ejecuciones adicionales
+     
       return () => clearTimeout(timeoutId);
     }
-  }, [despedidaEjecutada, props.actions.Redes, props.actions.SiNoCorreo]);
+  }, [despedidaEjecutada, props.actions.AspectoMejorar]);
 
   const handleClick = (url) => {
     // Abrir la URL en una nueva pestaña
@@ -36,58 +36,41 @@ export default function BotonAñosExpe(props) {
       <button
         onClick={() =>
           handleButtonClick(
-            "https://www.empleatecontalento.es/portales-empleo-jovenes-sin-experiencia-practicas-primer-empleo/"
+            "https://www.empleatecontalento.es/consultoras-seleccion-recursos-humanos-headhunters-cazatalentos-etts-buscar-trabajo-empleo/"
           )
         }
         className={getButtonClassName()}
       >
-        Portales de Empleo para Buscar Prácticas y Primeras Experiencias
-        Profesionales
+        Directorio de Consultoras de Selección y Head-hunters
       </button>
 
       <button
         onClick={() =>
           handleButtonClick(
-            "https://www.empleatecontalento.es/ferias-y-eventos-empleo/"
-          )
-        }
-        className={getButtonClassName()}
-      >
-        Directorio de Ferias de Empleo
-      </button>
-
-      <button
-        onClick={() =>
-          handleButtonClick(
-            "https://www.empleatecontalento.es/becas-trabajo-ofertas-practicas-curriculares-extracurriculares-academicas/"
-          )
-        }
-        className={getButtonClassName()}
-      >
-        Directorio de Becas de Trabajo
-      </button>
-
-      <button
-        onClick={() =>
-          handleButtonClick(
-            "https://www.empleatecontalento.es/mejores-webs-portales-empleo-para-buscar-trabajo/"
-          )
-        }
-        className={getButtonClassName()}
-      >
-        Directorio de Ofertas de Empleo y Prácticas en Multinacionales
-      </button>
-
-      <button
-        onClick={() =>
-          handleButtonClick(
-            "https://www.empleatecontalento.es/mejores-webs-portales-empleo-para-buscar-trabajo/"
+            "https://www.empleatecontalento.es/consultoras-seleccion-recursos-humanos-headhunters-cazatalentos-etts-buscar-trabajo-empleo/"
           )
         }
         className={getButtonClassName()}
       >
         Directorio de Portales de Empleo para Buscar Trabajo
       </button>
+
+      <button
+        onClick={() =>
+          handleButtonClick(
+            "https://www.empleatecontalento.es/mejores-webs-portales-empleo-para-buscar-trabajo/"
+          )
+        }
+        className={getButtonClassName()}
+      >
+        Directorio de Ofertas de Empleo en Multinacionales
+      </button>
     </div>
   );
 }
+
+
+
+
+
+

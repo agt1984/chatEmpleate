@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-export default function BotonAñosExpe(props) {
-
+export default function DeseasMasAyuda(props) {
   const [botonClickeado, setBotonClickeado] = useState(false);
 
   const handleClick = (action) => {
@@ -13,12 +12,13 @@ export default function BotonAñosExpe(props) {
     }
   };
 
-  const añosExpeMenos2 = () => {
-    props.actions.añosExpeMenos2();
+  const MasayudaSi = () => {
+    props.actions.AspectoMejorar();
   };
 
-  const añosExpeMas2 = () => {
-    props.actions.añosExpeMas2();
+  const MasayudaNo = () => {
+    props.actions.Redes();
+    props.actions.SiNoCorreo();
   };
 
   const getButtonClassName = () => {
@@ -29,17 +29,17 @@ export default function BotonAñosExpe(props) {
     <div>
       <button
         className={getButtonClassName()}
-        onClick={() => handleClick(añosExpeMenos2)}
+        onClick={() => handleClick(MasayudaSi)}
         disabled={botonClickeado}
       >
-        Menos de dos años
+        SI
       </button>
       <button
         className={getButtonClassName()}
-        onClick={() => handleClick(añosExpeMas2)}
+        onClick={() => handleClick(MasayudaNo)}
         disabled={botonClickeado}
       >
-        Mas de dos años
+        NO
       </button>
     </div>
   );

@@ -1,11 +1,14 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
 import Avatar from './components/Avatar';
 import BotonInicio from './components/BotonInicio';
-import BotonAñosExpe from './components/BotonAñosExpe';
-import BotonAñosExpeMenosEnlaces from './components/BotonAñosExpeMenosEnlaces';
-import BotonAñosExpeMasEnlaces from "./components/BotonAñosExpeMas";
+import BotonAñosExpe from './components/PrimerRama/BotonAñosExpe';
+import BotonAñosExpeMenosEnlaces from './components/PrimerRama/BotonAñosExpeMenosEnlaces';
+import BotonAñosExpeMasEnlaces from "./components/PrimerRama/BotonAñosExpeMas";
 import Redes from "./components/Redes";
 import SiNoCorreo from './components/SiNoCorreo';
+import AspectoMejorar from './components/FuncionesPuente/AspectoMejorar';
+import AyudaOrientador from './components/FuncionesPuente/AyudaOrientador';
+import DeseasMasAyuda from './components/FuncionesPuente/DeseasMasAyuda';
 
 const startbotn = document.querySelectorAll(".start-btn");
 
@@ -30,6 +33,7 @@ const config = {
     botAvatar: (props) => <Avatar {...props} />,
   },
 
+
   //atento a agregar las siguientes opciones
   widgets: [
     {
@@ -49,8 +53,27 @@ const config = {
       widgetFunc: (props) => <BotonAñosExpeMasEnlaces {...props} />,
     },
 
+    //funcion puente, conector entre eventos
+    {
+      widgetName: "DeseasMasAyuda",
+      widgetFunc: (props) => <DeseasMasAyuda {...props} />,
+    },
 
-    
+
+    //ayuda orientador
+    {
+      widgetName: "AyudaOrientador",
+      widgetFunc: (props) => <AyudaOrientador {...props} />,
+    },
+
+
+    //widgets lo que se mejora
+    {
+      widgetName: "AspectoMejorar",
+      widgetFunc: (props) => <AspectoMejorar {...props} />,
+    },
+
+
     //widgets generales
     {
       widgetName: "Redes",
