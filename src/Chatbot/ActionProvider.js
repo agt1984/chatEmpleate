@@ -16,7 +16,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
   const añosExpeMenos2 = () => {
     const message = createChatBotMessage(
-      "Te facilito los contenidos que mejor se ajustan a tus necesidades. Puedes seleccionar uno de los botones que te enviará directamente al portal que necesites.",
+      "Te facilito los contenidos que mejor se ajustan a tus necesidades. Puedes seleccionar uno o varios de los botones que te llevarán directamente al portal que necesites. No te preocupes si eres redireccionado a otra página; estaré esperándote con más opciones.",
       {
         widget: "BotonAñosExpeMenosEnlaces",
       }
@@ -26,7 +26,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
   const añosExpeMas2 = () => {
     const message = createChatBotMessage(
-      "Te facilito los contenidos que mejor se ajustan a tus necesidades. Puedes seleccionar uno de los botones que te enviará directamente al portal que necesites.",
+      "Te facilito los contenidos que mejor se ajustan a tus necesidades. Puedes seleccionar uno o varios de los botones que te llevarán directamente al portal que necesites. No te preocupes si eres redireccionado a otra página; estaré esperándote con más opciones.",
       {
         widget: "BotonAñosExpeMasEnlaces",
       }

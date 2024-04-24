@@ -1,9 +1,9 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
 import Avatar from './components/Avatar';
 import BotonInicio from './components/BotonInicio';
-import BotonAñosExpe from './components/PrimerRama/BotonAñosExpe';
-import BotonAñosExpeMenosEnlaces from './components/PrimerRama/BotonAñosExpeMenosEnlaces';
-import BotonAñosExpeMasEnlaces from "./components/PrimerRama/BotonAñosExpeMas";
+import BotonAñosExpe from './components/RamaEmpleo/BotonAñosExpe';
+import BotonAñosExpeMenosEnlaces from './components/RamaEmpleo/BotonAñosExpeMenosEnlaces';
+import BotonAñosExpeMasEnlaces from "./components/RamaEmpleo/BotonAñosExpeMas";
 import Redes from "./components/Redes";
 import SiNoCorreo from './components/SiNoCorreo';
 import AspectoMejorar from './components/FuncionesPuente/AspectoMejorar';
@@ -22,7 +22,7 @@ const config = {
   botName: "Consejero Virtual",
   initialMessages: [
     createChatBotMessage(
-      `Hola, bienvenid@a Empléate con Talento. Soy tu orientador virtual y puedo ayudarte a encontrar los mejores contenidos en función de tus necesidades, solo tienes que escojer las siguientes opciones.`,
+      `Hola, bienvenid@a Empléate con Talento. Soy tu orientador virtual y puedo ayudarte a encontrar los mejores contenidos en función de tus necesidades, solo tienes que escojer una de las siguientes opciones.`,
       {
         widget: "BotonInicio",
       }
