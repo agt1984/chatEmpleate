@@ -1,34 +1,119 @@
-import React from "react";
+/*
+import React, { useState } from "react";
 
 export default function AyudaOrientador(props) {
-  const handleClick = (url) => {
-    // Abrir la URL en una nueva pestaña al hacer clic en el botón
-    window.open(url, "_blank");
+  const [botonClickeado, setBotonClickeado] = useState(false);
+  
+   const handleClick = (url, action) => {
+     if (!botonClickeado) {
+       // Ejecutar la acción asociada al botón
+       action();
+       window.open(url, "_blank");
+       // Desactivar todos los botones
+       setBotonClickeado(true);
+     }
+   };
+
+   
+  const handleClick = (url, action) => {
+    if (action) {
+      action(); // Llamar a la función de acción si está definida
+    }
+    if (url) {
+      // Abrir la URL en una nueva pestaña si la URL está definida
+      window.open(url, "_blank");
+    }
+  };
+  
+
+  const Despedida = () => {
+    props.actions.Redes();
+    props.actions.SiNoCorreo();
+  };
+
+  const getButtonClassName = () => {
+    return botonClickeado ? "start-btn disabled" : "start-btn";
   };
 
   return (
     <div>
-      <a
-        href="https://www.whatsapp.com/channel/0029Va9lm9x2v1InvYQD9N20"
-        onClick={(e) => {
-          e.preventDefault();
-          handleClick(e.currentTarget.href);
-        }}
-        className="button-link"
+      <button
+        onClick={() =>
+          handleClick(
+            "https://www.empleatecontalento.es/orientacion-coaching-profesional-para-buscar-empleo/",
+            Despedida
+          )
+        }
+        disabled={botonClickeado}
+        className={getButtonClassName()}
       >
-        <button className="start-btn">Si</button>
-      </a>
+        Sí
+      </button>
 
-      <a
-        href="https://t.me/empleatecontalento"
-        onClick={(e) => {
-          e.preventDefault();
-          handleClick(e.currentTarget.href);
-        }}
-        className="button-link"
+      <button
+        onClick={() => handleClick(null, Despedida)}
+        disabled={botonClickeado}
+        className={getButtonClassName()}
       >
-        <button className="start-btn">No</button>
-      </a>
+        No
+      </button>
+    </div>
+  );
+}
+
+*/
+
+import React, { useState } from "react";
+
+export default function AyudaOrientador(props) {
+  const [botonClickeado, setBotonClickeado] = useState(false);
+
+  const handleClick = (url, action) => {
+    if (!botonClickeado) {
+      // Ejecutar la acción asociada al botón
+      if (action) {
+        action();
+      }
+      // Abrir la URL en una nueva pestaña si la URL está definida
+      if (url) {
+        window.open(url, "_blank");
+      }
+      // Desactivar todos los botones después de un clic
+      setBotonClickeado(true);
+    }
+  };
+
+  const Despedida = () => {
+    props.actions.Redes();
+    props.actions.SiNoCorreo();
+  };
+
+  const getButtonClassName = () => {
+    return botonClickeado ? "start-btn disabled" : "start-btn";
+  };
+
+  return (
+    <div>
+      <button
+        onClick={() =>
+          handleClick(
+            "https://www.empleatecontalento.es/orientacion-coaching-profesional-para-buscar-empleo/",
+            Despedida
+          )
+        }
+        disabled={botonClickeado}
+        className={getButtonClassName()}
+      >
+        Sí
+      </button>
+
+      <button
+        onClick={() => handleClick(null, Despedida)}
+        disabled={botonClickeado}
+        className={getButtonClassName()}
+      >
+        No
+      </button>
     </div>
   );
 }

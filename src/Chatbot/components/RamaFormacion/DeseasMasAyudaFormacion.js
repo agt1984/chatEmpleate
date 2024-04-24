@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-export default function BotonInicio(props) {
-  
+export default function DeseasMasAyudaFormacion(props) {
   const [botonClickeado, setBotonClickeado] = useState(false);
 
   const handleClick = (action) => {
@@ -13,16 +12,13 @@ export default function BotonInicio(props) {
     }
   };
 
-  const añosExpe = () => {
-    props.actions.añosExpe();
+  const MasayudaSi = () => {
+    props.actions.MasFormacion();
   };
 
-  const ramaFormacion = () => {
-    props.actions.SituacionActual();
-  };
-
-  const ramaEmprendimiento = () => {
-    props.actions.ramaEmprendimiento();
+  const MasayudaNo = () => {
+    props.actions.Redes();
+    props.actions.SiNoCorreo();
   };
 
   const getButtonClassName = () => {
@@ -33,24 +29,17 @@ export default function BotonInicio(props) {
     <div>
       <button
         className={getButtonClassName()}
-        onClick={() => handleClick(añosExpe)}
+        onClick={() => handleClick(MasayudaSi)}
         disabled={botonClickeado}
       >
-        ¿Estás buscando empleo?
+        SI
       </button>
       <button
         className={getButtonClassName()}
-        onClick={() => handleClick(ramaFormacion)}
+        onClick={() => handleClick(MasayudaNo)}
         disabled={botonClickeado}
       >
-        ¿Estás buscando formación?
-      </button>
-      <button
-        className={getButtonClassName()}
-        onClick={() => handleClick(ramaEmprendimiento)}
-        disabled={botonClickeado}
-      >
-        ¿Quieres emprender?
+        NO
       </button>
     </div>
   );

@@ -1,6 +1,9 @@
 import React from 'react';
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
+
+
+
   //--
   //rama años de EXPERIENCIA
   //--
@@ -34,29 +37,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     updateState(message);
   };
 
-
-
-  //FUNCIONES PUENTE
-  //----------------------------------------
-  //----------------------------------------
-  const AspectoMejorar = () => {
-    const message = createChatBotMessage(
-      "¿En cuáles de estos aspectos necesitas mejorar en tu búsqueda de empleo? Aqui te presento varias opciones en donde puedes investigar libremente",
-      {
-        widget: "AspectoMejorar",
-      }
-    );
-    updateState(message);
-  };
-  const AyudaOrientador = () => {
-    const message = createChatBotMessage(
-      "¿Necesitas ayuda de un orientador profesional?",
-      {
-        widget: "AyudaOrientador",
-      }
-    );
-    updateState(message);
-  };
   const DeseasMasAyuda = () => {
     const message = createChatBotMessage(
       "¿Deseas más ayuda en como mejorar en tu búsqueda de empleo?",
@@ -66,8 +46,93 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     );
     updateState(message);
   };
+
+
+
+  //--
+  //segunda rama FORMACION
+  //--
+  const SituacionActual = () => {
+    const message = createChatBotMessage(
+      "¿Cuál es tu situación actual? Puedes elegir una o varias de las opciones siguientes; estas te redirigirán a distintos portales donde se te proporcionará información sobre cursos gratuitos acordes a tu situación de personal.",
+      {
+        widget: "SituacionActual",
+      }
+    );
+    updateState(message);
+  };
+
+  const DeseasMasAyudaFormacion = () => {
+    const message = createChatBotMessage(
+      "Por otro lado, puedo ofrecerte más recursos para tu formación. ¿Te interesa?",
+      {
+        widget: "DeseasMasAyudaFormacion",
+      }
+    );
+    updateState(message);
+  };
+
+  const MasFormacion = () => {
+    const message = createChatBotMessage(
+      "Aquí te presento más opciones de formación. Puedes explorar los portales que te interesen.",
+      {
+        widget: "MasFormacion",
+      }
+    );
+    updateState(message);
+  };
+
+  const OrientadorFormacion = () => {
+    const message = createChatBotMessage(
+      "Te gustaria la ayuda de un orientador académico?",
+      {
+        widget: "AyudaOrientador",
+      }
+    );
+    updateState(message);
+  };
+
+
+
+  //--
+  //tercera rama EMPRENDIMIENTO
+  //--
+  const ramaEmprendimiento = () => {
+    const message = createChatBotMessage(
+      "¿En cuáles de estos aspectos necesitas ayuda como emprendedor/a? A continuación, se te presentarán distintos portales donde se te proporcionará información para que puedas iniciar tu proyecto de emprendimiento.",
+      {
+        widget: "EnlacesEmprendimiento",
+      }
+    );
+    updateState(message);
+  };
+
+
+  //FUNCIONES PUENTE
   //----------------------------------------
   //----------------------------------------
+  const AspectoMejorar = () => {
+    const message = createChatBotMessage(
+      "¿En cuáles de estos aspectos necesitas mejorar en tu búsqueda de empleo? Aqui te presento varias opciones en donde puedes investigar libremente.",
+      {
+        widget: "AspectoMejorar",
+      }
+    );
+    updateState(message);
+  };
+
+  const AyudaOrientador = () => {
+    const message = createChatBotMessage(
+      "Por otro lado, contamos con el servicio de un orientador profesional. ¿Te gustaría ser redirigido a su portal y solicitar su apoyo?",
+      {
+        widget: "AyudaOrientador",
+      }
+    );
+    updateState(message);
+  };
+  //----------------------------------------
+  //----------------------------------------
+
 
 
   //FUNCIONES QUE SERAN USADAS EN TODAS LAS RAMAS redes y correo
@@ -75,7 +140,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   //----------------------------------------
   const Redes = () => {
     const message = createChatBotMessage(
-      "Espero haberte ayudado ;) . Por último, te animo a seguirnos en nuestras RRSS para estar al día en nuestros contenidos",
+      "Espero haberte ayudado ;) . Por último, te animo a seguirnos en nuestras RRSS para estar al día en nuestros contenidos, aqui te presento varias opciones que te enviaran a los portales de nuestras redes sociales",
       {
         widget: "Redes",
       }
@@ -96,25 +161,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   //----------------------------------------
 
 
-  //--
-  //segunda rama FORMACION
-  //--
-  const ramaFormacion = () => {
-    const message = createChatBotMessage(
-      "¿Cuál es tu situación actual? Puedes marcar más de una opción"
-    );
-    updateState(message);
-  };
-
-  //--
-  //tercera rama EMPRENDIMIENTO
-  //--
-  const ramaEmprendimiento = () => {
-    const message = createChatBotMessage(
-      "¿En cuáles de estos aspectos necesitas ayuda como emprendedor/a? Puedes marcar más de una opción"
-    );
-    updateState(message);
-  };
 
   const updateState = (message, checker) => {
     setState((prev) => ({
@@ -129,16 +175,26 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       {React.Children.map(children, (child) => {
         return React.cloneElement(child, {
           actions: {
+            //empleo
             añosExpe,
             añosExpeMenos2,
             añosExpeMas2,
-            AspectoMejorar,
-            AyudaOrientador,
             DeseasMasAyuda,
 
-            ramaFormacion,
-            ramaEmprendimiento,
+            //formacion
+            SituacionActual,
+            DeseasMasAyudaFormacion,
+            MasFormacion,
+            OrientadorFormacion,
 
+            //emprendimiento
+            ramaEmprendimiento,
+            
+            //funciones puente
+            AspectoMejorar,
+            AyudaOrientador,
+            
+            //despedida
             Redes,
             SiNoCorreo,
           },

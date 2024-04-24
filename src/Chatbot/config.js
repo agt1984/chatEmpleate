@@ -4,11 +4,17 @@ import BotonInicio from './components/BotonInicio';
 import BotonAñosExpe from './components/RamaEmpleo/BotonAñosExpe';
 import BotonAñosExpeMenosEnlaces from './components/RamaEmpleo/BotonAñosExpeMenosEnlaces';
 import BotonAñosExpeMasEnlaces from "./components/RamaEmpleo/BotonAñosExpeMas";
-import Redes from "./components/Redes";
-import SiNoCorreo from './components/SiNoCorreo';
+import Redes from "./components/Despedida/Redes";
+import SiNoCorreo from './components/Despedida/SiNoCorreo';
 import AspectoMejorar from './components/FuncionesPuente/AspectoMejorar';
 import AyudaOrientador from './components/FuncionesPuente/AyudaOrientador';
-import DeseasMasAyuda from './components/FuncionesPuente/DeseasMasAyuda';
+import DeseasMasAyuda from './components/RamaEmpleo/DeseasMasAyuda';
+import SituacionActual from './components/RamaFormacion/SituacionActual';
+import DeseasMasAyudaFormacion from './components/RamaFormacion/DeseasMasAyudaFormacion';
+import MasFormacion from './components/RamaFormacion/MasFormacion';
+import EnlacesEmprendimiento from './components/RamaEmprendimiento/EnlacesEmprendimiento';
+
+
 
 const startbotn = document.querySelectorAll(".start-btn");
 
@@ -33,9 +39,9 @@ const config = {
     botAvatar: (props) => <Avatar {...props} />,
   },
 
-
   //atento a agregar las siguientes opciones
   widgets: [
+    //RAMA EMPLEO
     {
       widgetName: "BotonInicio",
       widgetFunc: (props) => <BotonInicio {...props} />,
@@ -53,12 +59,31 @@ const config = {
       widgetFunc: (props) => <BotonAñosExpeMasEnlaces {...props} />,
     },
 
+    //RAMA FORMACION
+    {
+      widgetName: "SituacionActual",
+      widgetFunc: (props) => <SituacionActual {...props} />,
+    },
+    {
+      widgetName: "DeseasMasAyudaFormacion",
+      widgetFunc: (props) => <DeseasMasAyudaFormacion {...props} />,
+    },
+    {
+      widgetName: "MasFormacion",
+      widgetFunc: (props) => <MasFormacion {...props} />,
+    },
+
+    //RAMA EMPRENDIMIENTO
+    {
+      widgetName: "EnlacesEmprendimiento",
+      widgetFunc: (props) => <EnlacesEmprendimiento {...props} />,
+    },
+
     //funcion puente, conector entre eventos
     {
       widgetName: "DeseasMasAyuda",
       widgetFunc: (props) => <DeseasMasAyuda {...props} />,
     },
-
 
     //ayuda orientador
     {
@@ -66,13 +91,11 @@ const config = {
       widgetFunc: (props) => <AyudaOrientador {...props} />,
     },
 
-
     //widgets lo que se mejora
     {
       widgetName: "AspectoMejorar",
       widgetFunc: (props) => <AspectoMejorar {...props} />,
     },
-
 
     //widgets generales
     {
