@@ -17,7 +17,7 @@ export default function SiNoCorreo(props) {
   };
 
   const correoNo = () => {
-    props.actions.correoNo();
+    props.actions.Final2();
   };
 
   const getButtonClassName = () => {

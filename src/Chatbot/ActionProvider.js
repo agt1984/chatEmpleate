@@ -169,7 +169,14 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
   const Final1 = () => {
     const message = createChatBotMessage(
-      `Te hemos mandado el correo. Hasta aquí el chat`
+      `El correo ha sido enviado exitosamente, hasta luego.`
+    );
+    updateState(message);
+  };
+
+  const Final2 = () => {
+    const message = createChatBotMessage(
+      `Espero haber sido de ayuda. Hasta luego.`
     );
     updateState(message);
   };
@@ -213,6 +220,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             SiNoCorreo,
             SendEmail,
             Final1,
+            Final2,
           },
         });
       })}
