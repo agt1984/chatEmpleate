@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 
 export default function BotonAñosExpeMas(props) {
@@ -12,7 +11,6 @@ export default function BotonAñosExpeMas(props) {
         setDespedidaEjecutada(true); // Marcar que Despedida se ha ejecutado
       }, 1600);
 
-     
       return () => clearTimeout(timeoutId);
     }
   }, [despedidaEjecutada, props.actions.AspectoMejorar]);
@@ -68,9 +66,3 @@ export default function BotonAñosExpeMas(props) {
     </div>
   );
 }
-
-
-
-
-
-

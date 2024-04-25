@@ -1,20 +1,18 @@
-import { createChatBotMessage } from 'react-chatbot-kit';
-import Avatar from './components/Avatar';
-import BotonInicio from './components/BotonInicio';
-import BotonAñosExpe from './components/RamaEmpleo/BotonAñosExpe';
-import BotonAñosExpeMenosEnlaces from './components/RamaEmpleo/BotonAñosExpeMenosEnlaces';
+import { createChatBotMessage } from "react-chatbot-kit";
+import Avatar from "./components/Avatar";
+import BotonInicio from "./components/BotonInicio";
+import BotonAñosExpe from "./components/RamaEmpleo/BotonAñosExpe";
+import BotonAñosExpeMenosEnlaces from "./components/RamaEmpleo/BotonAñosExpeMenosEnlaces";
 import BotonAñosExpeMasEnlaces from "./components/RamaEmpleo/BotonAñosExpeMas";
 import Redes from "./components/Despedida/Redes";
-import SiNoCorreo from './components/Despedida/SiNoCorreo';
-import AspectoMejorar from './components/FuncionesPuente/AspectoMejorar';
-import AyudaOrientador from './components/FuncionesPuente/AyudaOrientador';
-import DeseasMasAyuda from './components/RamaEmpleo/DeseasMasAyuda';
-import SituacionActual from './components/RamaFormacion/SituacionActual';
-import DeseasMasAyudaFormacion from './components/RamaFormacion/DeseasMasAyudaFormacion';
-import MasFormacion from './components/RamaFormacion/MasFormacion';
-import EnlacesEmprendimiento from './components/RamaEmprendimiento/EnlacesEmprendimiento';
-
-
+import SiNoCorreo from "./components/Despedida/SiNoCorreo";
+import AspectoMejorar from "./components/FuncionesPuente/AspectoMejorar";
+import AyudaOrientador from "./components/FuncionesPuente/AyudaOrientador";
+import DeseasMasAyuda from "./components/RamaEmpleo/DeseasMasAyuda";
+import SituacionActual from "./components/RamaFormacion/SituacionActual";
+import DeseasMasAyudaFormacion from "./components/RamaFormacion/DeseasMasAyudaFormacion";
+import MasFormacion from "./components/RamaFormacion/MasFormacion";
+import EnlacesEmprendimiento from "./components/RamaEmprendimiento/EnlacesEmprendimiento";
 
 const startbotn = document.querySelectorAll(".start-btn");
 
@@ -28,7 +26,7 @@ const config = {
   botName: "Consejero Virtual",
   initialMessages: [
     createChatBotMessage(
-      `Hola, bienvenid@a Empléate con Talento. Soy tu orientador virtual y puedo ayudarte a encontrar los mejores contenidos en función de tus necesidades, solo tienes que escojer una de las siguientes opciones.`,
+      `Hola, bienvenid@ a Empléate con Talento. Soy tu orientador virtual y puedo ayudarte a encontrar los mejores contenidos en función de tus necesidades, solo tienes que escojer una de las siguientes opciones.`,
       {
         widget: "BotonInicio",
       }
@@ -39,7 +37,11 @@ const config = {
     botAvatar: (props) => <Avatar {...props} />,
   },
 
-  //atento a agregar las siguientes opciones
+  state: {
+    gist: "",
+    infoBox: "",
+  },
+
   widgets: [
     //RAMA EMPLEO
     {

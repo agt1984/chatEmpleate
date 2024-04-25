@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
+import { useChatState } from "./ChatStateProvider";
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
-
-
+  const { updateChatState } = useChatState();
 
   //--
   //rama años de EXPERIENCIA
@@ -34,6 +34,11 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         widget: "BotonAñosExpeMasEnlaces",
       }
     );
+    updateChatState(
+      "https://www.empleatecontalento.es/consultoras-seleccion-recursos-humanos-headhunters-cazatalentos-etts-buscar-trabajo-empleo/",
+      "https://www.empleatecontalento.es/consultoras-seleccion-recursos-humanos-headhunters-cazatalentos-etts-buscar-trabajo-empleo/",
+      "https://www.empleatecontalento.es/mejores-webs-portales-empleo-para-buscar-trabajo/"
+    );
     updateState(message);
   };
 
@@ -46,8 +51,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     );
     updateState(message);
   };
-
-
 
   //--
   //segunda rama FORMACION
@@ -92,8 +95,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     updateState(message);
   };
 
-
-
   //--
   //tercera rama EMPRENDIMIENTO
   //--
@@ -106,7 +107,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     );
     updateState(message);
   };
-
 
   //FUNCIONES PUENTE
   //----------------------------------------
@@ -130,10 +130,9 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     );
     updateState(message);
   };
+
   //----------------------------------------
   //----------------------------------------
-
-
 
   //FUNCIONES QUE SERAN USADAS EN TODAS LAS RAMAS redes y correo
   //----------------------------------------
@@ -157,10 +156,25 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     );
     updateState(message);
   };
+
   //----------------------------------------
   //----------------------------------------
 
+  const SendEmail = () => {
+    const message = createChatBotMessage(
+      `Por favor, manda tu correo a través del recuadro de texto. El email se mandará automáticamente, no guardamos tus datos.`
+    );
+    updateState(message);
+  };
 
+  const Final1 = () => {
+    const message = createChatBotMessage(
+      `Te hemos mandado el correo. Hasta aquí el chat`
+    );
+    updateState(message);
+  };
+
+  //----------------------------------------------------------------
 
   const updateState = (message, checker) => {
     setState((prev) => ({
@@ -189,14 +203,16 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
             //emprendimiento
             ramaEmprendimiento,
-            
+
             //funciones puente
             AspectoMejorar,
             AyudaOrientador,
-            
+
             //despedida
             Redes,
             SiNoCorreo,
+            SendEmail,
+            Final1,
           },
         });
       })}

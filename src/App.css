@@ -10,11 +10,25 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background: #aa0740;
+  background: #9b0000 url("../src/assets/bg.jpg") repeat center;
+  background-size: cover;
+  background-attachment: "fixed";
+  background-blend-mode: overlay;
+  background-color: #a36659;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #900835, #e50947);
+  background: -webkit-linear-gradient(to right, #900835, #e50947),
+    url("../src/assets/bg.jpg") repeat center;
+  background-size: cover;
+  background-attachment: "fixed";
+  background-blend-mode: overlay;
+  background-color: #a36659;
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #d40c45, #aa072d);
+  background: linear-gradient(to right, #d40c45, #aa072d)
+    url("../src/assets/bg.jpg") repeat center;
+  background-size: cover;
+  background-attachment: "fixed";
+  background-blend-mode: overlay;
+  background-color: #a36659;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -23,11 +37,11 @@
   height: 600px;
 }
 
-.react-chatbot-kit-chat-inner-container{
+.react-chatbot-kit-chat-inner-container {
   height: 600px;
 }
 
-.react-chatbot-kit-chat-message-container{
+.react-chatbot-kit-chat-message-container {
   height: 520px;
 }
 
@@ -36,16 +50,22 @@
   width: 100%;
 }
 
+.react-chatbot-kit-chat-header {
+  background-color: #9b0000;
+  color: white;
+  font-weight: bold;
+}
+
 .react-chatbot-kit-chat-bot-message {
-  background-color: #f10947;
+  background-color: #9b0000;
 }
 
 .react-chatbot-kit-chat-bot-message-arrow {
-  border-right: 8px solid #f10947;
+  border-right: 8px solid #9b0000;
 }
 
 .react-chatbot-kit-chat-btn-send {
-  background-color: #f10947;
+  background-color: #9b0000;
   transition: 0.7s;
 }
 
@@ -59,8 +79,16 @@
   border-radius: 100%;
 }
 
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 2px solid #e20d0d;
+}
+
 .start-btn {
-  background-color: #e817b7;
+  background-color: #f10947;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 999px;
@@ -70,25 +98,24 @@
   margin-top: 3px;
 }
 .start-btn:hover {
-  background-color: #ff0245;
+  background-color: #ff7ea1;
   transition: 0.5s;
 }
 
 .end-btn {
-  background-color: #e817b7;
+  background-color: #57209e;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 999px;
   border: none;
   cursor: pointer;
-  margin-left: 1.8rem;
+  margin-left: 3rem;
   margin-top: 3px;
 }
 .end-btn:hover {
-  background-color: #ff0245;
+  background-color: #786adf;
   transition: 0.5s;
 }
-
 
 .slow-btn {
   margin-left: 1rem;
@@ -127,4 +154,3 @@
 .img-component a:hover {
   background-color: #61045f5e;
 }
-

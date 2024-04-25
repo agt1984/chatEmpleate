@@ -13,7 +13,7 @@ export default function SiNoCorreo(props) {
   };
 
   const correoSi = () => {
-    props.actions.correoSi();
+    props.actions.SendEmail();
   };
 
   const correoNo = () => {
@@ -23,7 +23,6 @@ export default function SiNoCorreo(props) {
   const getButtonClassName = () => {
     return botonClickeado ? "start-btn disabled" : "start-btn";
   };
-
   return (
     <div>
       <button
