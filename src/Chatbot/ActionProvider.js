@@ -24,6 +24,18 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         widget: "BotonAñosExpeMenosEnlaces",
       }
     );
+    updateChatState(
+      "    Directorio de Portales de Empleo para Buscar Prácticas y Primeras Experiencias Profesionales: ",
+      "https://www.empleatecontalento.es/portales-empleo-jovenes-sin-experiencia-practicas-primer-empleo/",
+      "    Directorio de Ferias de Empleo: ",
+      "https://www.empleatecontalento.es/ferias-y-eventos-empleo/",
+      "    Directorio de Becas de Trabajo: ",
+      "https://www.empleatecontalento.es/becas-trabajo-ofertas-practicas-curriculares-extracurriculares-academicas/",
+      "    Directorio de Ofertas de Empleo y Prácticas en Multinacionales: ",
+      "https://www.empleatecontalento.es/ofertas-trabajo-empleo-sectores-actividad/",
+      "    Directorio de Portales de Empleo para Buscar Trabajo: ",
+      "https://www.empleatecontalento.es/mejores-webs-portales-empleo-para-buscar-trabajo/"
+    );
     updateState(message);
   };
 
@@ -35,9 +47,12 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       }
     );
     updateChatState(
+      "    Directorio de Consultoras de Selección y Head-hunters: ",
       "https://www.empleatecontalento.es/consultoras-seleccion-recursos-humanos-headhunters-cazatalentos-etts-buscar-trabajo-empleo/",
-      "https://www.empleatecontalento.es/consultoras-seleccion-recursos-humanos-headhunters-cazatalentos-etts-buscar-trabajo-empleo/",
-      "https://www.empleatecontalento.es/mejores-webs-portales-empleo-para-buscar-trabajo/"
+      "    Directorio de Portales de Empleo para Buscar Trabajo: ",
+      "https://www.empleatecontalento.es/mejores-webs-portales-empleo-para-buscar-trabajo/",
+      "    Directorio de Ofertas de Empleo en Multinacionales: ",
+      "https://www.empleatecontalento.es/ofertas-trabajo-empleo-sectores-actividad/"
     );
     updateState(message);
   };
@@ -57,10 +72,20 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   //--
   const SituacionActual = () => {
     const message = createChatBotMessage(
-      "¿Cuál es tu situación actual? Puedes elegir una o varias de las opciones siguientes; estas te redirigirán a distintos portales donde se te proporcionará información sobre cursos gratuitos acordes a tu situación de personal.",
+      "¿Cuál es tu situación actual? Puedes elegir una o varias de las opciones siguientes; éstas te redirigirán a distintos portales donde se te proporcionará información sobre cursos gratuitos acordes a tu situación de personal.",
       {
         widget: "SituacionActual",
       }
+    );
+    updateChatState(
+      "    Directorio de Cursos Gratuitos para Desempleados: ",
+      "https://www.empleatecontalento.es/cursos-gratuitos-desempleados/",
+      "    Directorio de Cursos Gratuitos para Trabajadores y Autónomos: ",
+      "https://www.empleatecontalento.es/cursos-gratuitos-trabajadores-autonomos/",
+      "    Directorio de Cursos Gratuitos para Emprendedores: ",
+      "https://www.empleatecontalento.es/cursos-gratuitos-emprendedores/",
+      "    Directorio de Cursos Gratuitos para Menores de 35 años: ",
+      "https://www.empleatecontalento.es/cursos-gratuitos-jovenes-garantia-juvenil/"
     );
     updateState(message);
   };
@@ -82,6 +107,14 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         widget: "MasFormacion",
       }
     );
+    updateChatState(
+      "    Directorio de Recursos para Aprender Inglés Gratis: ",
+      "https://www.empleatecontalento.es/aprender-ingles-gratis/",
+      "    Directorio de Bootcamps y Másteres: ",
+      "https://www.empleatecontalento.es/mejores-bootcamps-tecnologicos/",
+      "    Directorio de Becas y Ayudas al Estudio: ",
+      "https://www.empleatecontalento.es/becas-ayudas-estudio-estudiar/"
+    );
     updateState(message);
   };
 
@@ -91,6 +124,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       {
         widget: "AyudaOrientador",
       }
+    );
+    updateChatState(
+      "    Servicios de Orientación Académica: ",
+      "https://www.empleatecontalento.es/orientacion-coaching-profesional-para-buscar-empleo/"
     );
     updateState(message);
   };
@@ -105,6 +142,23 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         widget: "EnlacesEmprendimiento",
       }
     );
+    updateChatState(
+      "    Directorio de Portales de Empleo para Buscar Proyectos o Clientes: ",
+      "https://www.empleatecontalento.es/portales-empleo-freelance/",
+      "    Directorios de Cursos Gratuitos, Libros, etc., para Emprender: ",
+      "https://www.empleatecontalento.es/cursos-gratuitos-emprendedores/",
+      "https://www.empleatecontalento.es/mejores-libros-para-emprendedores/",
+      "    Directorios de Recursos Económicos para Emprender: Ayudas, Financiación, Concursos, etc.: ",
+      "https://www.empleatecontalento.es/ayudas-para-emprendedores/",
+      "https://www.empleatecontalento.es/ayudas-para-contratar/",
+      "https://www.empleatecontalento.es/concursos-premios-emprendedores-emprendimiento/",
+      "    Directorio de Lanzaderas para Emprender: ",
+      "https://www.empleatecontalento.es/lanzadera-aceleradora-incubadora-empresa-startup/",
+      "    Directorio de Espacios de Trabajo Gratuitos: ",
+      "https://www.empleatecontalento.es/coworking-gratuitos-madrid/",
+      "    Guía gratuita de Marketing para Emprendedores: ",
+      "https://www.empleatecontalento.es/marketing-para-emprendedores/"
+    );
     updateState(message);
   };
 
@@ -118,6 +172,16 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         widget: "AspectoMejorar",
       }
     );
+    updateChatState(
+      "Guía para Elaborar un Buen Currículum: ",
+      "https://www.empleatecontalento.es/como-elaborar-buen-curriculum/",
+      "Guía para Elaborar una Buena Carta de Presentación: ",
+      "https://www.empleatecontalento.es/como-redactar-carta-presentacion/",
+      "Guía de Cómo Usar LinkedIn para Buscar Empleo: ",
+      "https://www.empleatecontalento.es/buscar-trabajo-linkedin/",
+      "Guía de Cómo Superar con Éxito una Entrevista de Trabajo: ",
+      "https://www.empleatecontalento.es/entrevista-trabajo/"
+    );
     updateState(message);
   };
 
@@ -127,6 +191,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       {
         widget: "AyudaOrientador",
       }
+    );
+    updateChatState(
+      "Servicios de Orientación Profesional: ",
+      "https://www.empleatecontalento.es/orientacion-coaching-profesional-para-buscar-empleo/"
     );
     updateState(message);
   };
@@ -139,7 +207,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   //----------------------------------------
   const Redes = () => {
     const message = createChatBotMessage(
-      "Espero haberte ayudado ;) . Por último, te animo a seguirnos en nuestras RRSS para estar al día en nuestros contenidos, aqui te presento varias opciones que te enviaran a los portales de nuestras redes sociales",
+      "Espero haberte ayudado ;) . Te animo a seguirnos en nuestras RRSS para estar al día en nuestros contenidos, aqui te presento varias opciones que te enviarán a los portales de nuestras redes sociales",
       {
         widget: "Redes",
       }
@@ -149,7 +217,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
   const SiNoCorreo = () => {
     const message = createChatBotMessage(
-      "Por ultimo, ¿Quieres que te enviemos estos contenidos a tu email?",
+      "Por último, ¿Quieres que te enviemos estos contenidos a tu email?",
       {
         widget: "SiNoCorreo",
       }
