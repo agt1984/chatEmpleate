@@ -68,6 +68,3 @@ export default function BotonAñosExpeMas(props) {
     </div>
   );
 }
-
-
-
