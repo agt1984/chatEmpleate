@@ -41,8 +41,7 @@ export default function BotonAñosExpe(props) {
         }
         className={getButtonClassName()}
       >
-        Portales de Empleo para Buscar Prácticas y Primeras Experiencias
-        Profesionales
+        Portales de Empleo para Primeras Experiencias Profesionales
       </button>
 
       <button

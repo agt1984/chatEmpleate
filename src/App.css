@@ -37,6 +37,24 @@
   height: 600px;
 }
 
+@media screen and (max-width: 600px) {
+  .react-chatbot-kit-chat-container {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .react-chatbot-kit-chat-container {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .react-chatbot-kit-chat-container {
+    width: 200px;
+  }
+}
+
 .react-chatbot-kit-chat-inner-container {
   height: 600px;
 }
