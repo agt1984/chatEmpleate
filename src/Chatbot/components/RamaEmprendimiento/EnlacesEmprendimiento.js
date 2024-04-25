@@ -62,7 +62,7 @@ export default function EnlacesEmprendimiento(props) {
         }
         className={getButtonClassName()}
       >
-        En conseguir dinero para emprender
+        En conseguir financiación para emprender
       </button>
 
       <button
@@ -73,7 +73,7 @@ export default function EnlacesEmprendimiento(props) {
         }
         className={getButtonClassName()}
       >
-        En conseguir socios para emprender
+        En encontrar lanzaderas para mi startup
       </button>
 
       <button
@@ -84,7 +84,7 @@ export default function EnlacesEmprendimiento(props) {
         }
         className={getButtonClassName()}
       >
-        En conseguir un espacio de trabajo
+        En conseguir un espacios de trabajo gratuitos
       </button>
 
       <button
